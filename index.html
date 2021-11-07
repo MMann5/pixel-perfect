@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="screen" onclick="toggleMenu(),closeModal()"></div>
+    <div class="screen-modal">
+        <div class="modal">
+            <h2 class="card-title">Join us to get access to the latest stories!</h2>
+            <p class="text">
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo
+                doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                irure
+            </p>
+            <div></div>Email to join : <input class="email" type="email">
+        </div>
+        <div class="btn-close">
+            <button class="close-modal" onclick="closeModal()">Submit</button>
+            <button class="close-modal" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+    </div>
+    <header class="main-header">
+        <div class="header-container main-layout flex space-between align-center">
+            <div class="logo"> Blogin<span>.</span> </div>
+            <nav class="main-nav flex">
+                <ul class="clean-list flex">
+                    <li class="dropdown">
+                        <a href="#" class="nav"> Journal</a>
+                        <ul class="clean-list dropdown-content" onclick="toggleMenu()">
+                            <li><a class="nav" href="#">October</a></li>
+                            <li><a class="nav" href="#">January</a></li>
+                            <li><a class="nav" href="#">April</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="nav" onclick="toggleMenu()"> About </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav" onclick="toggleMenu()"> Work </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav" onclick="toggleMenu()">Contact </a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="btn-menu-toggle" onclick="toggleMenu()">☰</button>
+    </header>
+
+    <main class="main-content main-layout">
+        <div class="card flex">
+            <img src="img/001.jpeg" alt="" class="card-img">
+            <div class="card-text flex column space-between">
+                <h2 class="card-title">Duis aute irure dolor in henderit in voluptate.</h2>
+                <p class="text">
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo
+                    doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                <p> Duis aute
+                    irure
+                    dolor in reprehenderit in voluptate
+                    velit esse cillum dolore eu fugiat nulla pariatur...
+                </p>
+                </p>
+                <button class="continue" onclick="toggleModal()">Continue Reading</button>
+            </div>
+        </div>
+
+        <div class="card flex">
+            <img src="img/002.jpeg" alt="" class="card-img">
+            <div class="card-text flex column space-between">
+                <h2 class="card-title">Duis aute irure dolor in henderit in voluptate.</h2>
+                <p class="text">
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo
+                    doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                <p> Duis aute
+                    irure
+                    dolor in reprehenderit in voluptate
+                    velit esse cillum dolore eu fugiat nulla pariatur...
+                </p>
+                </p>
+                <button class="continue" onclick="toggleModal()">Continue Reading</button>
+            </div>
+        </div>
+        <div class="card flex">
+            <img src="img/003.jpeg" alt="" class="card-img">
+            <div class="card-text flex column space-between">
+                <h2 class="card-title">Duis aute irure dolor in henderit in voluptate.</h2>
+                <p class="text">
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo
+                    doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                <p> Duis aute
+                    irure
+                    dolor in reprehenderit in voluptate
+                    velit esse cillum dolore eu fugiat nulla pariatur...
+                </p>
+                </p>
+                <button class="continue" onclick="toggleModal()">Continue Reading</button>
+            </div>
+        </div>
+    </main>
+
+    <section class="main-content pages-btns main-layout flex space-between">
+        <div class="btn-prev-next">← Previous</div>
+        <div class="btn-prev-next">Next →</div>
+    </section>
+
+    <footer class="main-footer flex column">
+        <div class="logo">Blogin<span>.</span></div>
+        <p class="credits">© 2014 Blogin.com - All Rights Reserved - Find more free Templates at
+            <span>Pixelhint.com</span></small>
+        <div class="social-btns flex">
+            <div class="social-btn facebook flex align-center fa fa-facebook"><a href="#"></a></div>
+            <div class="twitter social-btn flex align-center fa fa-twitter"><a href="#"></a></div>
+            <div class="behance social-btn flex align-center fa fa-behance"><a href="#"></a></div>
+            <div class="instagram social-btn flex align-center fa fa-instagram"><a href="#"></a></div>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+            document.body.classList.toggle('menu-open');
+            if (document.body.classList.contains('menu-open')) {
+                elBtn = document.querySelector('.btn-menu-toggle');
+                elModal = document.querySelector('.screen')
+                elModal.style.display = 'block'
+                elBtn.innerText = 'X'
+            }
+            else {
+                elBtn.innerText = '☰'
+            }
+        }
+
+        function toggleModal() {
+            document.body.classList.add('menu-modal');
+            if (document.body.classList.contains('menu-modal')) {
+                elModal = document.querySelector('.screen')
+                elModal.style.display = 'block'
+                elModal = document.querySelector('.screen-modal')
+                elModal.style.display = 'block'
+            }
+        }
+        function closeModal() {
+            document.body.classList.remove('menu-modal');
+            elModal = document.querySelector('.screen-modal')
+            elModal.style.display = 'none'
+            elModal = document.querySelector('.screen')
+            elModal.style.display = 'none'
+        }
+    </script>
+</body>
+
+</html>
